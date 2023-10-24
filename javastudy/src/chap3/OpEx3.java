@@ -18,15 +18,15 @@ public class OpEx3 {
 		System.out.printf("%d %% %d=%d\n",x,y,(x%y));
 		
 		//부호가 다른 경우의 나누기
-		System.out.println(10/8);
-		System.out.println(-10/8);
-		System.out.println(10/-8);
-		System.out.println(-10/-8);
+		System.out.println(10/8); //1
+		System.out.println(-10/8);//-1
+		System.out.println(10/-8);//-1
+		System.out.println(-10/-8);//1
 		//부호가 다른 경우의 나머지
-		System.out.println(10%8);
-		System.out.println(-10%8);
-		System.out.println(10%-8);
-		System.out.println(-10%-8);
+		System.out.println(10%8); //2
+		System.out.println(-10%8);//-2
+		System.out.println(10%-8); //2
+		System.out.println(-10%-8); //-2
 		
 	}
 }
