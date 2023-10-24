@@ -26,5 +26,9 @@ public class Exam4 {
 		int num = scan.nextInt();
 		System.out.println(num + ":" +
 		   ((num > 0)?"양수":(num < 0)?"음수":"영"));
+		// 입력된 숫자의 절대값 출력하기
+		// -10 : 10
+		// 10 : 10
+		System.out.println(num + "의 절대값:" + ((num >= 0)?num:-num));
 	}
 }
