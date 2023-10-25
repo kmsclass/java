@@ -9,7 +9,7 @@ public class Test6_A {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("반지름 :");
 		int r = scan.nextInt(); 
-		System.out.printf("넓이 : %.2f\n" , r*r*pi);
-		System.out.printf("둘레 : %.2f\n" , 2*r*pi);		
+		System.out.printf("넓이 : %.5f\n" , r*r*pi);
+		System.out.printf("둘레 : %.5f\n" , 2*r*pi);		
 	}
 }

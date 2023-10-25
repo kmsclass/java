@@ -20,6 +20,7 @@ public class Test2_A {
 		  Scanner scan = new Scanner(System.in);
 		  System.out.println("두자리 자연수를 입력하세요");
 		  int num = scan.nextInt();
+		  //num%10==0 : 입력된 수가 10의 배수인 경우
 		  int num10 = (num%10==0)?num:((num/10+1)*10);
 		  System.out.println
 		     ((num10 - num) + " : " + num10 + " - " + num );

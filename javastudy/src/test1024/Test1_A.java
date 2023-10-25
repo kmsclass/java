@@ -26,7 +26,7 @@ public class Test1_A {
 		System.out.println("1원 : " +  (amt%10) + "개");
 		System.out.println("==================");
 		System.out.println("500원 : " + amt/500 + "개");
-		amt %= 500;
+		amt %= 500;  //금액이 500 동전을 바꾼 후의 잔액 변경
 		System.out.println("100원 : " + amt/100 + "개");
 		amt %= 100;
 		System.out.println("50원 : " + amt/50 + "개");
