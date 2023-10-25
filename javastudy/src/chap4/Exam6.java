@@ -54,5 +54,13 @@ public class Exam6 {
 			}
 			System.out.println();
 		}
+		System.out.println("4번 삼각형=======");
+		for(int i=1;i<=h;i++) {
+			for(int j=1;j<=h;j++) {
+				if(i<=j) System.out.print("*");
+				else System.out.print(" ");
+			}
+			System.out.println();
+		}
 	}
 }

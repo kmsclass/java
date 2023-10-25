@@ -14,6 +14,6 @@ b : B
 */
 public class Test1 {
 	public static void main(String[] args) {
-		char ch = 'A';
+		char ch = '1';
 	}
 }
