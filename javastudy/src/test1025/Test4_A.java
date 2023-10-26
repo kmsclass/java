@@ -21,21 +21,22 @@ public class Test4_A {
 		System.out.println("년도를 입력하세요");
 		Scanner scan = new Scanner(System.in);
 		int year = scan.nextInt();
-		if(year%4 ==0) {
-			if(year % 100 == 0) {
+		if(year%4 ==0) { //윤년 가능성
+			if(year % 100 == 0) { //평년의 가능성
 				if(year%400 == 0) {
 					System.out.println("윤년");
 				} else {
 					System.out.println("평년");
 				}
-			} else {
+			} else {  //윤년
 				System.out.println("윤년");
 			}
-		} else {
+		} else { //평년
 			System.out.println("평년");
 		}
 		//2
-		if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
+		if (year % 400 == 0 || 
+				(year % 4 == 0 && year % 100 != 0)) {
 			System.out.println("윤년");
 		} else {
 			System.out.println("평년");

@@ -17,11 +17,14 @@ b : B
 public class Test1_A {
 	public static void main(String[] args) {
 		char ch = '-';	
+		//'0'의 코드값 : 48 - '0'
+		//'1'의 코드값 : 49 - '0'
+		//'2'의 코드값 : 50 - '0'
 		System.out.print(ch + " : ");
 		if(ch >= 'A' && ch <= 'Z') {
-			 System.out.println((char)(ch+32));
+			 System.out.println((char)(ch+32)); //소문자
 		} else if (ch >= 'a' && ch <= 'z') {
-			 System.out.println((char)(ch-32));
+			 System.out.println((char)(ch-32)); //대문자
 		} else if (ch >= '0' && ch <= '9') {
 			 System.out.println((ch-'0') + 20);
 		} else {

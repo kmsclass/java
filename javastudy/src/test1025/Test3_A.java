@@ -12,8 +12,8 @@ package test1025;
 
 public class Test3_A {
 	public static void main(String[] args) {
-		int sysdice = (int)(Math.random() * 6) + 1;
-		int userdice = (int)(Math.random() * 6) + 1;
+		int sysdice = (int)(Math.random() * 6) + 1; //1~6 난수
+		int userdice = (int)(Math.random() * 6) + 1; //1~6 난수
 		System.out.print("시스템 주사위값 :" + sysdice 
 				       + ",사용자 주사위값:" + userdice + "=>");
 		if(sysdice == userdice) {
