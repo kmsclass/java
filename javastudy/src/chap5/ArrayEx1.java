@@ -3,7 +3,7 @@ package chap5;
 public class ArrayEx1 {
 	public static void main(String[] args) {
 		//1. 배열의 선언
-		int[] arr; //참조변수 : 객체를 참조할 수 있는 변수
+		int []  arr; //참조변수 : 객체를 참조할 수 있는 변수
 		//2. 배열 객체 생성
 		arr = new int[5];
 		/*
