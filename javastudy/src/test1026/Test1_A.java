@@ -16,13 +16,15 @@ package test1026;
  */
 public class Test1_A {
   public static void main(String[] args) {
-	for (int k = 2; k <= 9; k += 4) {
-		for (int i = 0; i < 4; i++) {
+	for (int k = 2; k <= 9; k += 4) { //2,6
+		//단 출력
+		for (int i = 0; i < 4; i++) { //i: 0 1 2 3
 			System.out.print((i + k) + "단\t");
 		}
 		System.out.println();
+		//구구단. : 가로 출력
 		for (int j = 2; j <= 9; j++) { //항
-			for (int i = k; i < k + 4; i++) {
+			for (int i = k; i < k + 4; i++) { //6 ~ 9단까지 가로 출력
 			     System.out.print
 			            (i + "*" + j + "=" + (i * j) + "\t");
 			}				
@@ -30,5 +32,5 @@ public class Test1_A {
 		}
 		System.out.println();
 	}
-}
+  }
 }

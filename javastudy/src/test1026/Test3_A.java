@@ -10,11 +10,20 @@ public class Test3_A {
 	public static void main(String[] args) {
 		int sum = 0;
 		for (int i = 1; i <= 10; i++) {
+			for (int j = 1; j <= i; j++) {
+				sum += j;
+			}
+		}
+		System.out.println(sum);
+		sum = 0;
+		for (int i = 1; i <= 10; i++) {
 			System.out.print("(");
 			for (int j = 1; j <= i; j++) {
+				//(j == i) : 마지막출력
 				System.out.print(j + ((j == i) ? "" : "+"));
 				sum += j;
 			}
+			//i == 10 : i값의 마지막
 			System.out.print(")" + ((i == 10) ? "=" : "+"));
 		}
 		System.out.println(sum);

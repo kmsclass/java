@@ -13,8 +13,14 @@ import java.util.Scanner;
 public class Test6_A {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("삼각형의 높이를 홀수로 입력하세요");
-		int len = scan.nextInt(); 
+	    int len = 0;
+		while(true) {
+		   System.out.println("삼각형의 높이를 홀수로 입력하세요");
+		   len = scan.nextInt();
+		   if(len%2 ==0) {
+			   System.out.println("홀수로 입력하세요");
+		   }  else break;
+		}
 		//역이등변삼각형
 		for (int i = 0; i <= len / 2; i++) {
 			for (int j = 0; j < len - i; j++) {
