@@ -1,7 +1,9 @@
 package test1027;
 /*
-1.  다음은 주어진 문자열(value)이 숫자인지를 판별하는  프로그램을 작성하시오.
+1.다음은 주어진 문자열(value)이 숫자인지를 판별하는  프로그램을 작성하시오.
   String 함수 charAt(i), length() 을 사용함.
+  Scanner의 nextLine() 함수 이용하기
+    
   [결과]
 숫자만 입력하세요
 123
