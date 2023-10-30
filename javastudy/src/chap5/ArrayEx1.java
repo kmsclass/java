@@ -14,7 +14,7 @@ public class ArrayEx1 {
 		 *    boolean : false
 		 *    그외  : null 
 		 */
-		//3. 배열 값저장
+		//3. 배열 값저장. 인덱스는 0부터 시작
 		arr[0] = 10;
 		arr[1] = 20;
 		//4. 배열의 값 조회

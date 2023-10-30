@@ -12,7 +12,7 @@ public class ArrayEx8 {
 		//초기화
 		// int[][] arr
 		// int[] arr[0]
-		// int   arr[0][0] : 요소값
+		// int   arr[0][0] : 요소값   [행][열]
 		arr[0][0] = 10;arr[0][1] = 20;
 		arr[1][0] = 30;arr[1][1] = 40;
 		arr[2][0] = 50;arr[2][1] = 60;

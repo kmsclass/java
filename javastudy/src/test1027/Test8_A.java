@@ -12,8 +12,8 @@ public class Test8_A {
 			System.out.println("command line에 두개의 파라미터만 입력하세요");
 			return;
 		}
-		int num1 = Integer.parseInt(args[0]);
-		int num2 = Integer.parseInt(args[1]);
+		int num1 = Integer.parseInt(args[0]); //25
+		int num2 = Integer.parseInt(args[1]); //20
 		int min = (num1>num2)?num2:num1;
 		System.out.print(num1 + "과" +  num2+"의 공약수 : ");
 		for(int i=1;i<=min;i++) {
