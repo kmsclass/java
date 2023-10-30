@@ -16,14 +16,14 @@ import java.util.Scanner;
 */
 public class Test3_A {
 	public static void main(String[] args) {
-		int[] digit = {2,8,10,16};
+		int[] digit = {2,8,10,16}; //진수 배열
 		char[] numarr = "0123456789ABCDEF".toCharArray();
-		char[] arr;
+		char[] arr; //결과값 저장 배열
 		System.out.println("10진수 값을 입력하세요");
 		Scanner scan = new Scanner(System.in);
 		int num = scan.nextInt();
 		int divnum = num, index=0;
-		for (int d : digit) {  
+		for (int d : digit) { //d=2  
 			divnum = num;
 			index = 0;
 			arr = new char[32]; 

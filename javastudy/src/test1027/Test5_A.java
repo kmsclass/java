@@ -42,11 +42,11 @@ public class Test5_A {
 		if (money > maxmoney) {
 			System.out.println(maxmoney + ":동전이 부족합니다.");
 		} else {  
-		  for (int i = 0; i < coin.length; i++) {
+		  for (int i = 0; i < coin.length && money > 0; i++) {
 		    int coinNum = money / coin[i]; //계산된 동전 갯수
 			if (cnt[i] < coinNum) { 
-				coinNum = cnt[i]; 
-				cnt[i] = 0;
+				coinNum = cnt[i]; //5
+				cnt[i] = 0; //소유하고 있는 동전의 갯수를 0
 			} else {   //소유하고 있는 동전의 갯수 내
 				cnt[i] -= coinNum;
 			}

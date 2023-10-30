@@ -12,13 +12,13 @@ public class Test1_A {
 	public static void main(String[] args) {
 		System.out.println("숫자를 입력하세요");
 		Scanner scan = new Scanner(System.in);
-		int num = scan.nextInt(); //123
-		int tmp = num;  //0
-		int result = 0; //입력받은 수의 반대방향 수
-		while(tmp != 0) {   
-			result *=10;   
+		int num = scan.nextInt(); //121
+		int tmp = num; 
+		int result = 0; //0
+		while(tmp != 0) { //0   
+			result *=10; //121  
 			result += tmp %10;   
-			tmp /= 10; 
+			tmp /= 10; //0
 		}
 		if(num == result) {
 			System.out.println(num + ": 대칭수");
@@ -30,10 +30,9 @@ public class Test1_A {
         for(int i=snum.length()-1;i>=0;i--) {
         	rsnum += snum.charAt(i);
         }
-        if(snum.equals(rsnum))
+        if(snum.equals(rsnum)) //snum == rsnum 방식 안됨.
 			System.out.println(num + ": 대칭수");
 		else
 			System.out.println(num + ": 대칭수 아님");
-		
 	}
 }
