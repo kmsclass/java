@@ -18,34 +18,21 @@ public class Test1_A {
 				{ 70, 80, 75 }, { 75, 70, 85 }, 
 				{ 70, 75, 80 } 
 		};
-		//score.length + 1 : score 배열의 행의 값 + 1
-		//score[0].length + 1 : score 배열의 열의 값 + 1 
-		//result 배열의 크기 : score배열의 행,열 1씩 더큰 배열
 		int[][] result = 
 				new int[score.length + 1][score[0].length + 1];
-		//result 값에 저장
 		for (int i = 0; i < score.length; i++) {
 			for (int j = 0; j < score[i].length; j++) {
-				//score 배열의 값을 result 배열에 저장
 				result[i][j] = score[i][j];
-				//score[i].length : result 배열에 각 행의 마지막 열
-				//score 한행의 합을 result 각행의 마지막열에 합 저장
-				result[i][score[i].length] += score[i][j]; //행의 합
-				//result[score.length] : 마지막 행
-				result[score.length][j] += score[i][j]; //열의 합
-				//result[score.length][score[i].length] : 가장 마지막 셀
-				//전체 점수의 합
+				result[i][score[i].length] += score[i][j];
+				result[score.length][j] += score[i][j];
 				result[score.length][score[i].length] += score[i][j];
 			}
 		}
-		//result 배열 출력
 		for (int i = 0; i < result.length; i++) {
 			for (int j = 0; j < result[i].length; j++) {
 				System.out.printf("%5d", result[i][j]);
 			}
 			System.out.println();
 		}
-
-
 	}
 }
