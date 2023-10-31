@@ -18,13 +18,16 @@ public class Test1_A {
 				{ 70, 80, 75 }, { 75, 70, 85 }, 
 				{ 70, 75, 80 } 
 		};
-		int[][] result = 
-				new int[score.length + 1][score[0].length + 1];
+		int[][] result = new int[score.length + 1][score[0].length + 1];
+		//score 값과 합계를 result 배열에 저장
 		for (int i = 0; i < score.length; i++) {
 			for (int j = 0; j < score[i].length; j++) {
-				result[i][j] = score[i][j];
+				result[i][j] = score[i][j]; //score 값을 result 배열에 저장
+				//마지막 열에 행의 합을 저장
 				result[i][score[i].length] += score[i][j];
+				//마지막 행에 열의 합을 저장
 				result[score.length][j] += score[i][j];
+				//전체합 result 배열의 마지막 셀에 저장
 				result[score.length][score[i].length] += score[i][j];
 			}
 		}
@@ -34,5 +37,13 @@ public class Test1_A {
 			}
 			System.out.println();
 		}
+		System.out.println("개선 for 구문으로 출력");
+		for(int[] arr  : result) {  //인덱스 사용. 
+			for(int a : arr) {
+				System.out.printf("%5d", a);
+			}
+			System.out.println();
+		}
+			
 	}
 }
