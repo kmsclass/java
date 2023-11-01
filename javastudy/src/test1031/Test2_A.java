@@ -27,8 +27,8 @@ public class Test2_A {
 		Animal a = new Animal(); //객체화
 		a.name = "원숭이";
 		a.age = 20;
-//		System.out.println("이름(name):" + a.name);
-//		System.out.println("나이(age):" + a.age);
+		System.out.println("이름(name):" + a.name);
+		System.out.println("나이(age):" + a.age);
 		System.out.println(a);
 		a.eat();
 	}

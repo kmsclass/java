@@ -10,7 +10,7 @@ Spade:1(50,80)
 */
 public class Test1_A {
 	public static void main(String[] args) {
-		 Card card1 = new Card(); 
+		 Card card1 = new Card();  //객체화
 		 card1.kind = "Heart";
 		 card1.number = 1;
 	     System.out.println(card1); //toString() 멤버 메서드 호출

@@ -7,9 +7,9 @@ package test1031;
                  앞면,뒷면 출력함. 
 */
 class Coin {
-	int side;
+	int side;  //0:앞면, 1:뒷면 => 멤버변수, 필드(Field)
 	void flip() {
-		side = (int)(Math.random()*2);
+		side = (int)(Math.random()*2); //동전의 앞면,뒷면 설정
 //		System.out.println(side==0?"앞면":"뒷면");
 	}
 }
