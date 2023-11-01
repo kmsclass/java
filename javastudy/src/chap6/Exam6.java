@@ -27,6 +27,8 @@ public class Exam6 {
 		Student2 s1 = new Student2("홍길동",1);
 		Student2 s2 = new Student2("김삿갓",2,80,90,70);
 		System.out.println(s1);
+		System.out.println("=====================");
 		System.out.println(s2);
+		System.out.println("=====================");
 	}
 }
