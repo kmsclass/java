@@ -16,9 +16,9 @@ package test1101;
 public class Test4 {
 	public static void main(String[] args) {
 		Circle[] carr=new Circle[3];
-		carr[0] = new Circle(10,10,10);
-		carr[1] = new Circle(20,20);   
-		carr[2] = new Circle(100);     
+		carr[0] = new Circle(10,10,10); //반지름,x좌표,y좌표
+		carr[1] = new Circle(20,20);    //x좌표,y좌표
+		carr[2] = new Circle(100);      //반지름
 		for(Circle c : carr) {
 			System.out.println(c);
 			c.move(10,10);
