@@ -12,7 +12,7 @@ class Car3 {
 		sno = ++cnt;
 	}
 	Car3(String c) { //생성자
-		color = c;
+		this.color = c;
 		number = 1000;
 		sno = ++cnt;
 	}

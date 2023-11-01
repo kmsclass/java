@@ -1,6 +1,15 @@
 package chap6;
 /*
  * this,this() 예제
+ * 
+ * this 참조변수 : 자기참조변수
+ *        현재 객체의 참조값을 저장하고있음. 
+ *        인스턴스메서드에서만 사용 가능 => 인스턴스메서드 내부에 지역변수로 선언됨.
+ *        지역변수와 멤버변수를 구분시 사용함.
+ *        =>멤버변수와, 지역변수는 같은 이름을 사용할 수 있다 => 지역변수 우선.
+ *        
+ * this() 생성자 : 클래스의 생성자에서 오버로딩된 다른 생성자를 호출시 사용
+ *        => 반드시 첫줄에 구현해야 함        
  */
 class Car4{
 	String color;
@@ -9,12 +18,13 @@ class Car4{
 	static int cnt;
 	Car4(String color,int number) {
 		System.out.println("Car4(String color,int number) 생성자 호출");
-		this.color = color;
+		this.color = color; //멤버변수 color <= 매개변수 color 대입
 		this.number = number;
 		this.sno = ++cnt;
 	}
 	Car4(){
-		this("White",1111);
+		//this()는 반드시 생성자의 첫줄에 구현해야함.
+		this("White",1111); //생성자중(String,int) 형인 생성자 호출
 		System.out.println("Car4() 생성자 호출");
 	}
 	Car4(String color){
