@@ -22,7 +22,27 @@ package chap6;
       평균:80.0
    ===================== 
 */
+class Student2 {
+	int studno,kor,eng,math;
+	String name;
+	Student2(String name,int studno) {
+		this(name,studno,0,0,0);
+	}
+	Student2(String name,int studno,int kor,int eng,int math) {
+		this.name = name;
+		this.studno = studno;
+		this.kor = kor;
+		this.eng = eng;
+		this.math = math;
+	}
+	public String toString() {
+		return String.format
+	("학번:%d\n이름:%s\n국어:%d\n영어:%d\n수학:%d\n총점:%d\n평균:%.1f",
+			studno,name,kor,eng,math,kor+eng+math,(kor+eng+math)/3.0);
+	}
+}
 public class Exam6 {
+	int num = 100;
 	public static void main(String[] args) {
 		Student2 s1 = new Student2("홍길동",1);
 		Student2 s2 = new Student2("김삿갓",2,80,90,70);
@@ -30,5 +50,6 @@ public class Exam6 {
 		System.out.println("=====================");
 		System.out.println(s2);
 		System.out.println("=====================");
+//		System.out.println(this.num);//this참조변수 인스턴스메서드에서만 가능
 	}
 }
