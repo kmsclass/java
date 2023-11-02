@@ -30,7 +30,7 @@ class Coin {
 	int side, sno;
 	static int cnt;
 	Coin() {  //생성자
-		sno = ++cnt;
+		sno = ++cnt;  //동전의 번호
 	}
 	void flip() {
 		side = (int)(Math.random() * 2);
@@ -44,10 +44,10 @@ public class Test2_A {
 		Coin[] coinarr = new Coin[10]; //Coin 참조변수 10개를 저장한 배열 객체
 		int[] cntarr = new int[2]; //0:앞면갯수,1:뒤면갯수
 		for(int i=0;i<coinarr.length;i++) {
-			coinarr[i] = new Coin();  //Coin 객체
-			coinarr[i].flip(); //앞/뒷 면 중 선택
+			coinarr[i] = new Coin();  //Coin 객체 생성
+			coinarr[i].flip(); //앞/뒷 면 중 임의로 선택하여 side 값을 변경
 			System.out.println(coinarr[i]);  //toString() 메서드 호출
-			cntarr[coinarr[i].side]++;
+			cntarr[coinarr[i].side]++; //갯수 증가
 		}
 		System.out.println("전체 앞면 동전의 갯수 :" + cntarr[0]);
 		System.out.println("전체 뒷면 동전의 갯수 :" + cntarr[1]);	

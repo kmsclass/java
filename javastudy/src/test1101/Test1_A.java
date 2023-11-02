@@ -13,10 +13,10 @@ package test1101;
 class Rectangle {
 	int width, height, sno;
 	static int cnt;
-	Rectangle(int width, int height) {
+	Rectangle(int width, int height) { //생성자
 		this.width = width;
 		this.height = height;
-		sno = ++cnt;
+		sno = ++cnt;  //사각형번호
 	}
 	int area() {
 		return width * height;
@@ -39,9 +39,10 @@ public class Test1_A {
 		for(int i=0;i<rarr.length;i++) {
 			int width = (int)(Math.random() * 31) + 20;
 			int height =(int)(Math.random() * 31) + 20; 
-			rarr[i] = new Rectangle(width,height);
-			totarea += rarr[i].area(); 
-			totlength += rarr[i].length(); 
+			rarr[i] = new Rectangle(width,height); //생성자
+			totarea += rarr[i].area(); //area() 메서드 리턴타입 int
+			totlength += rarr[i].length();//length() 메서드 리턴타입 int 
+			System.out.println(rarr[i]);
 		}
 		for(Rectangle r : rarr) {
 			System.out.println(r);

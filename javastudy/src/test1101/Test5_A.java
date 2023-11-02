@@ -17,27 +17,26 @@ public class Test5_A {
 	public static void main(String[] args) {
 		Coin myCoin = new Coin();
 		Coin youCoin = new Coin();
-		int mycnt = 0, youcnt = 0;
+		int mycnt = 0, youcnt = 0; //앞면의 갯수
 		System.out.println("myCoin\tyouCoin");
 		while(true){
-			myCoin.flip();
-			youCoin.flip();
-			if(myCoin.side == 0){
+			myCoin.flip(); //동전의 side값 변경
+			youCoin.flip();//동전의 side값 변경 
+			if(myCoin.side == 0){ //myCoin 객체의 side가 앞면
 				System.out.print("앞면\t");
 				mycnt++;
-			}else{
+			}else{ //myCoin 객체의 side가 뒷면
 				System.out.print("뒷면\t");
 				mycnt = 0;
 			}			
-			if(youCoin.side == 0){
+			if(youCoin.side == 0){ //youCoin 객체의 side가 앞면
 				System.out.print("앞면\n");
 				youcnt++;
-			}else{
+			}else{ //youCoin 객체의 side가 뒷면
 				System.out.print("뒷면\n");
 				youcnt = 0;
 			}			
-			if(mycnt == 3 || youcnt == 3)
-				break; 
+			if(mycnt == 3 || youcnt == 3) break;  //반복문 종료 
 		}
 		System.out.println((mycnt > youcnt)?"myCoin 승리":
 			               (mycnt < youcnt)?"youCoin 승리":"비김");

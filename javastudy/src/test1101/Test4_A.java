@@ -23,7 +23,7 @@ class Circle {
 		this.r = r;
 		this.x = x;
 		this.y = y;
-		no = ++count;
+		no = ++count; //원의번호
 	}
 	Circle(int a, int b ){
 		this(1,a,b);
@@ -37,32 +37,34 @@ class Circle {
 	double length() {
 		return 2*Math.PI*r;
 	}
-	void move(int a, int b) {
-		x += a; 
-		y += b; 
+	void move(int x, int y) { //인스턴스메서드
+		this.x += x; 
+		this.y += y; 
 	}
 	void scale(double m) {
-		r *=m; 
+		r *=m;
+//		r = (int)(r*m);
 	}
 	public String toString() {
-//		return no + "번원 : 반지름 :"+r+","
-//	         +"좌표 : ("+ x+","+y+"), 넓이 :" + area() 
-//	         + ", 둘레:"+ length();
-		return String.format("%d번원 : 반지름:%d,좌표:(%d,%d), 넓이:%.3f, 둘레:%.3f",
-				no,r,x,y,area(),length()) ;
+		return no + "번원 : 반지름 :"+r+","
+	         +"좌표 : ("+ x+","+y+"), 넓이 :" + area() 
+	         + ", 둘레:"+ length();
+//		return String.format
+//				("%d번원 : 반지름:%d,좌표:(%d,%d), 넓이:%.3f, 둘레:%.3f",
+//				no,r,x,y,area(),length()) ;
 	}
 }
 public class Test4_A {
 	public static void main(String[] args) {
 		Circle[] carr=new Circle[3]; //
-		carr[0] = new Circle(10,10,10);
-		carr[1] = new Circle(20,20);   
-		carr[2] = new Circle(100);     
+		carr[0] = new Circle(10,10,10); //반지름,x좌표,y좌표
+		carr[1] = new Circle(20,20);    //x좌표,y좌표
+		carr[2] = new Circle(100);      //반지름
 		for(Circle c : carr) {
 			System.out.println(c);
 			c.move(10,10);
-			System.out.println(c);
-			c.scale(3);
+			System.out.println(c); //x,y좌표 이동
+			c.scale(3);            //반지름 3배
 			System.out.println(c);
 		}
 	}
