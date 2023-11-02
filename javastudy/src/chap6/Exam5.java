@@ -14,8 +14,8 @@ class SutdaCard {
 		num=1;
 		isKwang = true;
 	}
-	SutdaCard(int n,boolean b){
-		num = n;
+	SutdaCard(int num,boolean b){
+		this.num = num;
 		isKwang = b;
 	}	
 	public String toString() {
