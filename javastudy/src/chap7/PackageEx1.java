@@ -13,11 +13,19 @@ package chap7;
  * 클래스의 패키지명을 생략 할 수 있는 경우
  *  1. 같은 패키지에 속한 클래스 사용시
  *  2. java.lang 패키지에 속한 클래스 사용시
+ *  3. import 구문에서 선언된 클래스 사용시
  */
-public class PackageEx1 {
+class Pack1 { //chap7.Pack1
+	void method() { //default 접근 제어자
+		System.out.println("chap7.Pack1 클래스의 메서드");
+	}
+}
+public class PackageEx1 {  //chap7.PackageEx1
 	public static void main(String[] args) {
 		java.util.Scanner scan = new java.util.Scanner(System.in);
 		java.lang.System.out.println();
+		chap7.Pack1 p1 = new chap7.Pack1();
+		p1.method();
 	}
 }
 
