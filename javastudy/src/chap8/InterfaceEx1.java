@@ -12,13 +12,20 @@ package chap8;
  *  상수 :  [public static final] int NUM=100;  (o)
  *         [public static ] final int NUM=100;  (o)
  *         protected int NUM=100;              (x)
- *  추상메서드 :   void method();  (0)        
+ *  추상메서드 : [public abstract] void method();  (0)        
+ *            [public ] abstract void method();  (0)
+ *  default 메서드 : 구현부가 있는 메서드. 인스턴스멤버. jdk8 이후에서 가능
+ *  static 메서드 : 구현부가 있는 메서드. 클래스멤버. jdk8 이후에서 가능
+ *  
+ *  참조자료형 : 배열, 클래스, 인터페이스
  */
+interface Printerable {
+	int INK = 100;          //상수  public static final int INK = 100
+	abstract void print();  //추상메서드  public abstract void print()
+}
 public class InterfaceEx1 {
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+//		Printerable.INK = 1000;
+		System.out.println(Printerable.INK);
 	}
-
 }

@@ -24,8 +24,6 @@ package test1103;
 사자,다리수:4개 =>어흥거린다
 초식동물을 잡아먹는다
  */
-
-
 public class Test1 {
 	public static void main(String[] args) {
 		Animal[] animal = new Animal[2];
