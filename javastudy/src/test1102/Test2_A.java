@@ -3,11 +3,14 @@ package test1102;
 1. Food 클래스
 멤버 변수 : 가격(price)과 포인트(point)
 생성자 : 식품의 객체 생성시 가격을 입력받아야 하고, 가격의 10%를 포인트로 저장한다.
+
 식품의 종류는 과일(Fruit),음료(Drink),과자(Snack)로 나눠 진다.
 Fruit 클래스 : Food 클래스의 하위 클래스
 Drink 클래스 : Food 클래스의 하위 클래스
 Snack 클래스 : Food 클래스의 하위 클래스
+
 과일 클래스는 당도(brix)를, 음료는 용량(ml), 과자는 무게(gram)을 멤버로 가진다
+
 과일의 종류로는 사과(Apple),복숭아(Peach),
 음료의 종류로는 콜라(Cock) 와 사이다(Sidar)
 과자의 종류로는 비스킷(Biscuit)과 쿠키(Cookie) 가 있다.
@@ -22,7 +25,7 @@ class Food {
 	}
 }
 class Fruit extends Food {
-	double brix;
+	double brix; //당도
 	Fruit(int price, double brix) {
 		super(price);
 		this.brix = brix;
@@ -43,7 +46,7 @@ class Snack extends Food {
 	}
 }
 class Apple extends Fruit {
-	Apple(int price, double brix) {
+	Apple(int price, double brix) {  //구동클래스에 맞도록 생성자 구현
 		super(price,brix);
 	}
 	public String toString() {
