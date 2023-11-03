@@ -105,5 +105,4 @@ public class Test3 {
 		b.buy(cookie);
 		b.summary();
 	}
-
 }
