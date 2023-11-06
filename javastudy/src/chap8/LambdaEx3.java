@@ -15,5 +15,11 @@ public class LambdaEx3 {
 		System.out.println("두수의 곱:"+fi.method(2, 5));
 		fi=(x,y)->x*y;
 		System.out.println("두수의 곱:"+fi.method(2, 5));
+		fi=(x,y)->x+y;
+		System.out.println("두수의 합:"+fi.method(2, 5));
+		fi=(x,y)->(x>y)?x:y;
+		System.out.println("두수 중 큰값:"+fi.method(2, 5));
+		fi=(x,y)->(x<y)?x:y;
+		System.out.println("두수 중 작은값:"+fi.method(2, 5));
 	}
 }
