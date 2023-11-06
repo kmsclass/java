@@ -8,15 +8,15 @@ package test1103;
  *        void eat(); => 추상메서드
  *        void sound(); => 추상메서드
  */
-abstract class  Animal {
+abstract class  Animal { //추상클래스
 	String type;
 	int leg;
 	Animal(String type, int leg) {
 		this.type = type;
 		this.leg = leg;
 	}
-	abstract void eat();
-	abstract void sound();
+	abstract void eat();  //추상메서드
+	abstract void sound(); //추상메서드
 }
  /* 2. Dog클래스  :  Animal 클래스의 자손클래스
  *    생성자의 매개변수 없음.
@@ -28,8 +28,8 @@ class Dog extends Animal {
 	Dog() {
 		super("강아지",4);
 	}
-	@Override
-	void eat() {
+	@Override //어노테이션
+	void eat() {  //오버라이딩 필수
 		System.out.println("주인이 주는대로 먹는다");
 	}
 	@Override
@@ -71,7 +71,8 @@ public class Test1_A {
 		animal[0] = new Dog();
 		animal[1] = new Lion();
 		for (Animal a : animal) {
-			System.out.print(a.type + ",다리수:" + a.leg + "개 =>");
+			System.out.print
+			(a.type + ",다리수:" + a.leg + "개 =>");
 			a.sound();
 			a.eat();
 		}

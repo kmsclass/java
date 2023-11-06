@@ -1,7 +1,10 @@
 package test1103;
+
+import java.util.Arrays;
+
 /*
  * SutdaCard 클래스
- *   멤버변수 : int number,boolean  isKwang
+ *   멤버변수 : final int number,final boolean  isKwang
  *   생성자 : 멤버변수를 매개변수로 입력받아 초기화
  *   멤버메서드 : toString을 결과에 맞도록 오버라이딩하기
  * SutdaDeck 클래스 구현하기
@@ -15,7 +18,7 @@ class SutdaCard {
 	final int number;
 	final boolean isKwang;
 	SutdaCard(int number,boolean isKwang) {
-		this.number = number;
+		this.number = number;  //생성자에서 상수값 초기화
 		this.isKwang = isKwang;
 	}
 	@Override
@@ -37,6 +40,8 @@ class SutdaDeck {
 		for(SutdaCard s : cards)
 			result += s + ",";
 		return result;
+//		return Arrays.toString(cards);
+//		return cards.toString();
 	}
 }
 

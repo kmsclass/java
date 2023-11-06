@@ -14,8 +14,8 @@ package test1103;
 노래를 부릅니다
 그림을 그립니다 	
 */
-abstract class Robot {
-	abstract void action();
+abstract class Robot { //추상클래스
+	abstract void action();  //추상메서드
 }
 class DanceRobot extends Robot {
 	@Override
@@ -32,7 +32,7 @@ class SingRobot extends Robot {
 class DrawRobot extends Robot {
 	@Override
 	void action() {
-		System.out.println("그립을 그립니다");
+		System.out.println("그림을 그립니다");
 	}
 }
 
