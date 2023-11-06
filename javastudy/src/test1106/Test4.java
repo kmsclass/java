@@ -8,7 +8,8 @@ interface LambdaInterface3 {
 	int method(int x, int y);
 }
 public class Test4 {
-	public static void main(String[] args) {		
+	public static void main(String[] args) {	
+		LambdaInterface3 f;
 		System.out.println("두수 (5,2)의 합:" + calc(5,2,f));//7
 		System.out.println("두수 (5,2)의 곱:" + calc(5,2,f));//10
 		int[] arr = {1,2,3,4,5,6,7,8,9,10};
