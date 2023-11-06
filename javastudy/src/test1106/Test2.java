@@ -14,8 +14,6 @@ Audio를 끕니다.
 무음을 해제합니다.
 건전지를 교환합니다.
  */
-interface RemoteControl {
-}
 class Television implements RemoteControl{
 	public void turnOn() {
 		System.out.println("TV를 켭니다.");
