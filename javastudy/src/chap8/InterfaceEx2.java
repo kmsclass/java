@@ -42,7 +42,12 @@ public class InterfaceEx2 {
 		for(Animal a : arr) {
 			a.eat();
 			//비둘기는 날아다닌다 메세지 출력:fly 메서드 호출하기 
-			
+//			a.fly(); //Animal 클래스의 멤버가 아님
+			if(a instanceof Flyable) {
+//				Flyable f = (Flyable)a;
+//				f.fly();
+				((Flyable)a).fly();
+			}
 		}
 	}
 }
