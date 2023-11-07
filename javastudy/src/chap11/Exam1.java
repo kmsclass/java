@@ -18,7 +18,13 @@ class Card {
 			Card c = (Card)obj;
 			return kind.equals(c.kind) && number == c.number;
 		} else return false;
-	}	
+	}
+	//toString 오버라이딩
+	@Override
+	public String toString() {
+		return "Card [kind=" + kind + ", number=" + number + "]";
+	}
+	
 }
 public class Exam1 {
 	public static void main(String[] args) {
