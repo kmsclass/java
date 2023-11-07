@@ -22,6 +22,6 @@ public class Test4_A {
 		return result;
 	}
 	private static int calc(int i, int j, LambdaInterface3 f) {
-		return f.method(i, j);
+		return f.method(i, j);//5,2
 	}
 }
