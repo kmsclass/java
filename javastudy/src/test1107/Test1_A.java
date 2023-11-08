@@ -25,10 +25,10 @@ public class Test1_A {
 		Scanner scan = new Scanner(System.in);
 		while(true) {
 			System.out.println("1부터 100까지의 숫자를 입력하세요");
-			int num = 0;
+			int num = 0;  //while 블럭에서 사용 가능한 변수
 			try {
 			 num = scan.nextInt();
-			 cnt++;
+			 cnt++;  //입력횟수 증가
 			 if(num < 1 || num > 100) 
 				 throw new Exception  //예외 발생
 				       ("1부터 100까지의 숫자만 입력하세요");
@@ -36,12 +36,12 @@ public class Test1_A {
 				String d = scan.next();
 				cnt++;
 				System.out.println(d + "는 숫자가 아닙니다.");
-				continue;
+				continue; //반복문의 처음으로 제어 이동
 			} catch(Exception e) {
 				System.out.println(e.getMessage());
 				continue;
 			}
-			//1 ~ 100사이의 문자가 입력된 경우만 실행
+			//1 ~ 100사이의 정수가 입력된 경우만 실행
 			if(num == answer) break;
 			else if(num > answer) 
 				System.out.println("작은수를 입력하세요");

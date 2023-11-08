@@ -5,6 +5,7 @@ package test1107;
 [학번=100, 이름=홍길동,전공=경영]과 [학번=100, 이름=홍길동,전공=컴공]는 다른 객체입니다.
 [학번=100, 이름=홍길동,전공=경영]과 [학번=100, 이름=홍길동,전공=컴공]학생은 같은 학생입니다. 
  */
+/* Test2_A.java 소스와 중복됨 
 class Student {
 	int studno;
 	String name;
@@ -15,6 +16,7 @@ class Student {
 		this.major = major;
 	}
 }
+*/
 public class Test2 {
 	public static void main(String[] args) {
 		Student s1 = new Student(100,"홍길동","경영");
