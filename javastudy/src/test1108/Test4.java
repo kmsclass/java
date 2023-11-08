@@ -1,9 +1,9 @@
 package test1108;
 /*
  * 소숫점이하 자리수까지 반올림하여 출력하기
- *    round(double 실수값,int 소숫점이하자리수)  
+ *  double  round(double 실수값,int 소숫점이하자리수)  
  * 소숫점이하 자리수에서 버림하여 출력하기
- *    truncate(double 실수값,int 소숫점이하자리수)  
+ *  double  truncate(double 실수값,int 소숫점이하자리수)  
  */
 public class Test4 {
 	public static void main(String[] args) {
