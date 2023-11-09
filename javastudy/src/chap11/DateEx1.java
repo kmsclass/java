@@ -1,5 +1,6 @@
 package chap11;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 /*
@@ -14,6 +15,10 @@ import java.util.Date;
  *     ss   : 초2자리
  *     E    : 요일
  *     a    : 오전/오후
+ *     
+ *    중요한 메서드
+ *    String format(Date d) : 날짜d값을 받아서 설정된 패턴에 맞는 문자열을 리턴 
+ *    Date parse(String s)  : 패턴에 맞는 문장열데이터를 Date 형으로 리턴 
  */
 public class DateEx1 {
 	public static void main(String[] args) {
@@ -22,5 +27,20 @@ public class DateEx1 {
 		SimpleDateFormat sf =
 				new SimpleDateFormat("yyyy-MM-dd HH:mm:ss E a");
 		System.out.println(sf.format(now));
+		SimpleDateFormat sf2 =
+				new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date day = null;
+		try {
+			day = sf2.parse("2023-12-25 10:00:00"); //예외처리 필수
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		System.out.println(day);
+		//day 값을 2023년 12월 25일 월요일 형식으로 출력하기
+		SimpleDateFormat sf3 =
+				new SimpleDateFormat("yyyy년 MM월 dd일 E요일");
+		System.out.println(sf3.format(day));
+		
+		
 	}
 }
