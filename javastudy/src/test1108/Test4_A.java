@@ -22,10 +22,10 @@ public class Test4_A {
 		return Double.parseDouble(sf);
 	}
 	private static double truncate(double d, int i) {
-//		double num = Math.pow(10,i);
-//		return (int)(d*num)/num;
-		String sd = d+"";
-		int dot = sd.indexOf(".");
+//		double num = Math.pow(10,i); 
+//		return (int)(d*num)/num; 
+		String sd = d+"";   // "3.15345"
+		int dot = sd.indexOf("."); // 1
 		return Double.parseDouble
 				(sd.substring(0,dot)+sd.substring(dot,dot+1+i));
 		
