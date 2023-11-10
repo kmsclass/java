@@ -9,7 +9,9 @@ import java.util.Random;
  
 [결과]
 -2,1,0,-3,-2,1,-1,0,-2,0,0,1,0,-3,0,-1,-1,-2,-2,1,
-3,3,0,0,-1,-1,0,3,2,3,0,-1,1,1,-1,3,0,0,1,-1,    
+3,3,0,0,-1,-1,0,3,2,3,0,-1,1,1,-1,3,0,0,1,-1,
+
+    nextInt(10) : (숫자의범위 (작은수 큰수까지의 차이)) + 최소값
  */
 public class Test2_A {
 	public static void main(String[] args) {
@@ -23,9 +25,9 @@ public class Test2_A {
 	}
 	static int getRand(int f,int t) {
 //		int min = Math.min(f,t);
-		int min = (f > t)?t:f;
+		int min = (f > t)?t:f; //조건연산자
 		int max = Math.max(f,t);
-		int cha = max - min;
+		int cha = max - min;  //최대값 - 최소값 => 숫자의 갯수 - 1
 //		return (int)(Math.random() * (cha+1)) + min;
 		Random r = new Random();
 		return  r.nextInt(cha+1) + min;

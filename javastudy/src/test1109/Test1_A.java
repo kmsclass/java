@@ -14,20 +14,21 @@ package test1109;
 public class Test1_A {
 	public static void main(String[] args) {
 		String str = "가나다";
-		System.out.println(format(str, 7, 0));
+		System.out.println(format(str, 7, 0)); //왼쪽정렬
 		System.out.println(format(str, 7, 1));
 		System.out.println(format(str, 7, 2));
 		System.out.println(format(str, 2, 0));
+		System.out.println(format(str, 3, 0));
 	}
 	static String format(String str, int len, int align) {
 		if (str.length() >= len)
 			return str.substring(0, len);
-		
+		//StringBuffer 객체를 len의 갯수만큼 공백으로 채우기
 		StringBuffer sb = new StringBuffer();
 		for (int i = 0; i < len; i++) {
 			sb.append(" ");
 		}
-		int l = len - str.length();
+		int l = len - str.length(); //채울 공백의 갯수
 		switch (align) {
 		 case 0:sb.replace(0, str.length(), str);break;
 		 case 1:sb.replace(l/2,str.length()+l/2, str);break;
