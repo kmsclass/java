@@ -10,6 +10,8 @@ import java.util.List;
     멤버메서드 
          String toString() : 각멤버변수값,총점,평균 출력
          int getTotal() : 점수의 합 리턴
+         
+2. 결과가 나오도록 구동클래스 완성하기
 
 [결과]
 기본정렬방식 : 이름 오름차순으로 정렬
