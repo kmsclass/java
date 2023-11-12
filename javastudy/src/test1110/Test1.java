@@ -1,5 +1,8 @@
 package test1110;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 /*
  * phoneNumArr 에서
  * 전화번호 일부를 입력받아 입력받은 번호를 포함하고 있는 번호를 찾기
@@ -23,5 +26,17 @@ public class Test1 {
 				"02-3456-7890","053-2456-7980", 
 				"088-2346-9870","013-3456-7890",
 				"051-1234-5678","02-1234-7890"};
+		String str = Arrays.toString(phoneNumArr);
+		System.out.println(str);
+		
+		Comparator c = new Comparator() {
+
+			@Override
+			public int compare(Object o1, Object o2) {
+				// TODO Auto-generated method stub
+				return 0;
+			}
+			
+		}; 
 	}
 }
