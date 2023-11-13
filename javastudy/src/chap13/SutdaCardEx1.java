@@ -63,8 +63,7 @@ class SutdaDeck {
 	void shuffle()  {
 		Collections.shuffle(cards);
 		System.out.println(cards);
-	}
-	
+	}	
 }
 public class SutdaCardEx1 {
 	public static void main(String[] args) {
