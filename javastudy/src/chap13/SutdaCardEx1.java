@@ -2,6 +2,7 @@ package chap13;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -35,6 +36,18 @@ class SutdaCard {
 class SutdaDeck {
 	List<SutdaCard> cards;
 	static Map<String,Integer> jokbo;
+	static {  //static 초기화블럭
+		jokbo = new HashMap<>();
+		jokbo.put("KK", 4000);
+		for(int i=1;i<=10;i++)
+			jokbo.put(""+i+i, 3000+(i*10));
+		jokbo.put("12", 2060);jokbo.put("21", 2060);
+		jokbo.put("14", 2050);jokbo.put("41", 2050);
+		jokbo.put("19", 2040);jokbo.put("91", 2040);
+		jokbo.put("110", 2030);jokbo.put("101", 2030);
+		jokbo.put("410", 2020);jokbo.put("104", 2020);
+		jokbo.put("46", 2010);jokbo.put("64", 2010);		
+	}
 	SutdaDeck(){
 		cards = new ArrayList<>();
 		for(int i=0;i<20;i++)
