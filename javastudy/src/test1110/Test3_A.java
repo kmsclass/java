@@ -64,7 +64,7 @@ class Student implements Comparable<Student> {
 	}
 
 	@Override
-	public int compareTo(Student o) {
+	public int compareTo(Student o) {//이름순으로 정렬
 		return name.compareTo(o.name);
 	}
 }

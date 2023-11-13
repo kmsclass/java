@@ -31,16 +31,15 @@ public class Test1_A {
 		while (true) {
 			System.out.println("찾고자 하는 번호를 입력하세요(종료:q)");
 			String input = s.nextLine().trim();
-			if (input.equals(""))
-				continue;
-			else if (input.equalsIgnoreCase("Q"))
-				return;
+			if (input.equals("")) continue;
+			else if (input.equalsIgnoreCase("Q")) break;
 			String pattern = input;
 			Pattern p = Pattern.compile(pattern);
 			int cnt = 0;
 			for (int i = 0; i < phoneNumArr.length; i++) {
 				String phoneNum = phoneNumArr[i];
-				String num = phoneNum.replace("-","");
+				//- 사이에 찾는 번호가 있는 경우
+				String num = phoneNum.replace("-","");//0234567890
 				Matcher m = p.matcher(num);
 				if (m.find()) {
 					cnt++;
@@ -48,7 +47,7 @@ public class Test1_A {
 				}
 			}
 			if(cnt == 0)
-		     	System.out.println(cnt + ":찾는 번호가 없습니다.");
+		     	System.out.println(input + ":찾는 번호가 없습니다.");
 		}
 	}
 }

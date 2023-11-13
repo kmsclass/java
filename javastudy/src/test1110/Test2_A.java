@@ -58,7 +58,7 @@ public class Test2_A {
 		System.out.println("홀수의 최소값 위치:" 
 		                         + list.indexOf(Collections.min(list)));
 		System.out.println("입력된 홀수 목록:" + list);
-		Collections.sort(list);
+		Collections.sort(list); //정렬
 		System.out.println(list);
 		System.out.print("중간값 :");
 		if(list.size() %2==1) //요소의 갯수가 홀수개
