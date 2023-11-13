@@ -1,0 +1,61 @@
+package chap13;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+
+/*
+ * SutdaCard 클래스 구현하기
+ */
+class SutdaCard {
+	int num;
+	boolean isKwang;
+	SutdaCard(int num,boolean isKwang) {
+		this.num = num;
+		this.isKwang = isKwang;
+	}
+	public String toString() {
+		return num + ((isKwang)?"K":"");
+	}
+}
+/*
+ * SutdaDeck 클래스
+ * 1. 멤버변수 : List<SutdaCard> cards;
+ *             static Map<String,Integer> jokbo;
+ * 2. 생성자 : 매개변수없음
+ *            ShudaCard 20장을 cards 객체에 저장.
+ *            1~10의 숫자를 가진 카드 각각2장씩. 
+ *            1,3,8인 카드중 한장은 iskwang=true 인 카드 생성
+ * 3. 멤버메서드 : 
+ *       SutdaCard pick(int idx) : cards 에서 idx에 해당하는 카드를 제거하여 리턴
+ *       SutdaCard pick()        : cards 에서 임의의 카드를 제거하여 리턴
+ *       void shuffle()          : cards를 섞기 기능.                           
+ */
+class SutdaDeck {
+	List<SutdaCard> cards;
+	static Map<String,Integer> jokbo;
+	SutdaDeck(){
+		cards = new ArrayList<>();
+		for(int i=0;i<20;i++)
+			cards.add(new SutdaCard(i%10+1,((i==0||i==2||i==7)?true:false)));
+		System.out.println(cards);
+	}
+	SutdaCard pick(int idx) {
+		return cards.remove(idx);
+	}
+	SutdaCard pick() {
+		return cards.remove((int)(Math.random()*cards.size()));
+	}
+	void shuffle()  {
+		Collections.shuffle(cards);
+		System.out.println(cards);
+	}
+	
+}
+public class SutdaCardEx1 {
+	public static void main(String[] args) {
+		SutdaDeck deck = new SutdaDeck();
+		deck.shuffle();
+	}
+}

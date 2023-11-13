@@ -14,6 +14,10 @@ import java.util.TreeSet;
  *           TreeSet : 정렬. 중복불가
  *           LinkedHashSet : 순서유지.중복불가 
  * Map : (key,객체)쌍인 객체들의 모임
+ *      구현클래스 =>
+ *           HashMap : (key,객체)쌍 객체들 저장
+ *           Hashtable : 이전 구버전 클래스. (key,객체)쌍 객체들 저장
+ *           TreeMap : key순으로 정렬. (key,객체)쌍 객체들 저장
  * 
  * Set 주요 메서드
  *   boolean add(Object) : 추가성공(true),추가실패(false) 
