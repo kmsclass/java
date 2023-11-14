@@ -1,6 +1,7 @@
 package test1113;
 
 import java.util.Comparator;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.TreeSet;
 /*
@@ -25,11 +26,15 @@ public class Test2_A {
      Scanner scan = new Scanner(System.in);
      System.out.println("1부터 99까지의 숫자를 입력하세요 (종료 : 0)");
      while(true) {
-    	 int num = scan.nextInt();
-    	 if(num == 0) break;
-    	 if(num < 1 || num > 99) continue;
-    	 set1.add(num);
-    	 set2.add(num);
+    	 try {
+    	    int num = scan.nextInt();
+      	    if(num == 0) break;
+    	    if(num < 1 || num > 99) continue;
+    	    set1.add(num);
+    	    set2.add(num);
+    	 }catch(InputMismatchException e) {
+    		 scan.next();
+    	 }
      }
      System.out.println("set1:"+set1);
      System.out.println("set2:"+set2);

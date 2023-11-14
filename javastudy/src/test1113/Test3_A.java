@@ -49,7 +49,7 @@ public class Test3_A {
 			String food = scan.next();
 			if(food.equals("종료")) break;
 			String pair = foods.get(food);
-			if(pair == null) {
+			if(pair == null) { //등록된 음식이 없는 경우
 				System.out.println
 				   (food +"의 궁합음식이 등록되어 있지 않습니다.등록하시겠습니까?");
 				String yn = scan.next();
@@ -63,5 +63,11 @@ public class Test3_A {
 			}
 		}
 		System.out.println(foods);
+		for(String k : foods.keySet()) {
+			System.out.println(k+"의 궁합음식:"+foods.get(k));
+		}
+		for(Map.Entry<String, String> e : foods.entrySet()) {
+			System.out.println(e.getKey()+"의 궁합음식:"+e.getValue());
+		}
 	}
 }
