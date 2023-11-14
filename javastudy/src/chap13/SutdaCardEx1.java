@@ -113,6 +113,20 @@ public class SutdaCardEx1 {
 		list.add(new Player("김삿갓",deck.pick(0),deck.pick(0)));
 		list.add(new Player("이몽룡",deck.pick(0),deck.pick(0)));
 		for(Player p : list) System.out.println(p);
-		
+		System.out.println("deck에 남은 카드의 갯수:"+deck.cards.size());
+		System.out.println("deck에 남은 카드:"+deck.cards);
+		/*
+		 * Player 중 가장 높은 점수를 가진 Player의 이름 출력하기
+		 * 홍길동 승리.
+		 * 1등이 2명인 경우 : 홍길동,김삿갓 비김
+		 */
+		//점수의 내림차순으로 정렬하기
+		Collections.sort(list,(p1,p2)->p2.getScore() - p1.getScore());
+		System.out.println(list);
+		if(list.get(0).getScore() == list.get(1).getScore())
+			System.out.println
+			(list.get(0).name + "," + list.get(1).name + ": 비김");
+		else
+			System.out.println(list.get(0).name + " 승리");
 	}
 }
