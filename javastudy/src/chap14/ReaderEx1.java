@@ -9,6 +9,11 @@ import java.io.Reader;
  */
 public class ReaderEx1 {
 	public static void main(String[] args) throws IOException {
+		/*
+		 * InputStream System.in
+		 * Reader = new InputStreamReader(InputStream);
+		 * Reader.read() : 2바이트단위로 읽기
+		 */
 		Reader in = new InputStreamReader(System.in);
 		int data = 0;
 		while((data = in.read()) != -1)
