@@ -38,8 +38,8 @@ public class Test1_A {
 			(new Player((i+1)+"번",deck.pick(0),deck.pick(0)));
 		}
  		System.out.println("단순 등수 : ");
-		Collections.sort
-		    (list, (p1,p2)->p2.getScore() - p1.getScore());
+ 		//점수값의 내림차순으로 정렬
+		Collections.sort(list, (p1,p2)->p2.getScore() - p1.getScore());
 		System.out.println("등수:");
 		int i=0;
 		for(Player g : list) {
@@ -48,8 +48,22 @@ public class Test1_A {
 		
  		System.out.println("동점자 등수 : ");
  		//rank : (점수,동점자Player리스트)
-		Map<Integer,List<Player>> rank = 
-				        new TreeMap<>(Comparator.reverseOrder());
+ 		/*
+1등:4번(9,9):3090
+2등:9번(10,1K):2030
+3등:7번(7,2):9
+4등:5번(3K,4):7
+4등:6번(5,2):7
+6등:3번(5,10):5
+7등:1번(6,8):4
+7등:8번(1,3):4
+7등:10번(6,8K):4
+10등:2번(7,4):1
+
+<Integer,List<Player> : 점수=점수가 같은 Player 목록. 점수의 내림차순 정렬 
+rank : {3090=[4번],2030=[9번],9=[7번],7=[5번,6번],5=[3번],4=[1번,8번,10번],1=[2번]}
+ 		 */
+		Map<Integer,List<Player>> rank = new TreeMap<>(Comparator.reverseOrder());
 		for(Player g : list) {
 			List<Player> eqrank = rank.get(g.getScore());
 			if(eqrank == null) 
@@ -58,11 +72,19 @@ public class Test1_A {
 			rank.put(g.getScore(), eqrank);
 		}	
 		int r = 0;
+		//rank.values() : 객체들만 조회.
 		for(List<Player> l : rank.values()) {
-			for(Player g : l)
+			for(Player g : l) //[3번]
 				System.out.println((r+1) + "등:" + g);
-			r += l.size();
+			r += l.size(); //5
 	    }
+		//1등:4번
+		//2등:9번
+		//3등:7번
+		//4등:5번
+		//4등:6번
+		//6등:3번
+		//...
 		
 	}
 }

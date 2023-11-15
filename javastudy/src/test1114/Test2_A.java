@@ -19,13 +19,15 @@ public class Test2_A {
 			String s = scan.next();
 			if(s.equals("exit")) break;
 			try {
+				//읽어올 파일이 없는 경우 : FileNotFoundException 예외 발생
 				FileInputStream fis = new FileInputStream(s);
+				//읽어올 파일이 있는 경우 실행
 				int len = 0;
 				byte[] buf = new byte[fis.available()];
 				while ((len = fis.read(buf)) != -1) {
 					System.out.println(new String(buf, 0, len));
 				}
-			} catch (FileNotFoundException e) {
+			} catch (FileNotFoundException e) {//IOException의 하위클래스
 				System.out.println("해당 파일 없음");
 			} catch (IOException e) {
 				e.printStackTrace();
