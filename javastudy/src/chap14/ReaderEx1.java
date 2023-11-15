@@ -8,7 +8,7 @@ import java.io.Reader;
  * Reader : 문자형 입력 스트림. 2바이트단위(1char단위)로 읽음
  */
 public class ReaderEx1 {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws Exception {
 		/*
 		 * InputStream System.in
 		 * Reader = new InputStreamReader(InputStream);
