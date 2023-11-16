@@ -19,7 +19,8 @@ CA FE BA BE 00 00 00 34 00 8E 07 00 02 01 00 17
 public class Test3_A {
 	public static void main(String[] args) throws IOException {
 		FileInputStream fis = 
-		new FileInputStream("bin/chap14/InputStreamEx1.class");
+//		new FileInputStream("bin/chap14/InputStreamEx1.class");
+				new FileInputStream("apple.gif");
 		byte[] buf = new byte[16];
 		int len;
 		while ((len = fis.read(buf)) != -1) {

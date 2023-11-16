@@ -13,13 +13,12 @@ import java.io.IOException;
 */
 public class Test2_A {
 	public static void main(String[] args) throws IOException {
-//		File f1 = new File("src/chap14"); //상대 경로 : 현재 기준폴더이후
+//		File f1 = new File("src/chap14"); //상대 경로 : 현재 기준폴더(프로젝트폴더)이후
 		//절대 경로 : root 폴더부터 폴더 경로를 설정 
 		File f1 = new File("src/chap14");  
 		String[] flist = f1.list(); //chap14 폴더의 하위 파일 목록
 		int len;
-		FileOutputStream fos = 
-				 new FileOutputStream("InputStream예제.txt");
+		FileOutputStream fos = new FileOutputStream("InputStream예제.txt");
 		byte[] buf = new byte[1024]; //1K
 		for(String fname : flist) {
 			//fname : chap14 폴더의 하위 파일 이름 중 한개 

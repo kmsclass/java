@@ -22,15 +22,15 @@ import java.util.Scanner;
 exit
  */
 public class Test1_A {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException  {
 		Scanner scan = new Scanner(System.in);
 		while(true) {
 			System.out.println("파일명을 입력하세요(종료:exit)");
-			String filename = scan.next();
+			String filename = scan.next(); //aaa.txt => aaa.bak
 			if(filename.equals("exit")) break;
 			//lastdot : 마지막의 .의 위치
 			int lastdot = filename.lastIndexOf(".");
-			String bakfile=null;  //복사 파일
+			String bakfile=null;  //복사 파일이름
 			if (lastdot  < 0) // 파일 이름에 . 이 없는 경우 
 				 bakfile =filename + ".bak";
 			// 파일 이름 마지막에 .bak 확장로 변경
