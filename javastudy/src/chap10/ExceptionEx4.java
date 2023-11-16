@@ -23,6 +23,7 @@ public class ExceptionEx4 {
 		   System.out.println(Integer.parseInt("abc")); //NumberFormatException발생
 		} catch(RuntimeException e) {
 			System.out.println("second 메서드에서 예외처리");
+//			throw e; //예외발생
 		}
 	}
 }
