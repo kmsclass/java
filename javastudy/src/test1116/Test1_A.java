@@ -15,16 +15,17 @@ public class Test1_A {
 		int interval = 3 * 1000; // 3초
 		Scanner scan = new Scanner(System.in);
 		words.add(data[0]);
+//Runnable 인터페이스 : run() 추상메서드 1개 => FunctionalInterface => 람다식 가능
 		Thread t1 = new Thread(()->{
 			while (true) {
+				words.add(data[(int) (Math.random() * data.length)]);
 				try {
 					Thread.sleep(interval);
 				} catch (InterruptedException e) {}
-				words.add(data[(int) (Math.random() * data.length)]);
 			}			
 		});
-		t1.setDaemon(true);
-		t1.start();
+		t1.setDaemon(true); //데몬스레드로 설정
+		t1.start(); //스레드 시작 기능
 		while (true) {
 			System.out.println(words);
 			System.out.print(">>");

@@ -8,7 +8,7 @@ public class Test2_B {
 	public static void main(String[] args) {
 		long start = System.currentTimeMillis();
 		List<String> words = new ArrayList<String>();
-		int interval = 3 * 1000; 
+		int interval = 5 * 1000; 
  	    Scanner scan = new Scanner(System.in);
 		words.add("abcd");
 		Thread t1 = new Thread(()->{
@@ -32,10 +32,9 @@ public class Test2_B {
 			System.out.print(">>");
 			String input = scan.next().trim();
 			words.remove(input);
-			if (words.size() == 0)
-				break;
+			if (words.size() == 0)	break;
 		}
 		System.out.println
-		("게임 시간 :" + ((System.currentTimeMillis())/1000-start) + "초");
+		("게임 시간 :" + ((System.currentTimeMillis()-start)/1000) + "초");
 	}
 }

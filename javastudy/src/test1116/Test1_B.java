@@ -20,10 +20,10 @@ class DataAddRunnable implements Runnable {
 	@Override
 	public void run() {
 		while (true) {
+			words.add(data[(int) (Math.random() * data.length)]);
 			try {
 				Thread.sleep(interval);
 			} catch (InterruptedException e) {}
-			words.add(data[(int) (Math.random() * data.length)]);
 		}			
 	}
 }

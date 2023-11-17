@@ -25,7 +25,7 @@ public class Test2_A {
 		List<String> words = new ArrayList<String>();
 		int interval = 5 * 1000; 
  	    Scanner scan = new Scanner(System.in);
-		words.add("abcdef");
+		words.add("abcd");
 		EngDataAddThread t1 = new EngDataAddThread(words, interval);
 		t1.setDaemon(true);
 		t1.start();
@@ -50,16 +50,16 @@ class EngDataAddThread extends Thread {
 	@Override
 	public void run() {
 		while (true) {
-			try {
-				sleep(interval);
-			} catch (InterruptedException e) {}
-			int chlen = (int)(Math.random() * 2)+3;
+			int chlen = (int)(Math.random() * 2)+3; //3~4개의 영문자
 			StringBuffer sb = new StringBuffer();
 			for(int i=0;i<chlen;i++) {
 				char ch = (char)('a' + (int)(Math.random() * 26));
 				sb.append(ch);
 			}
 			words.add(sb.toString());
+			try {
+				sleep(interval);
+			} catch (InterruptedException e) {}
 		}
 	}
 	
