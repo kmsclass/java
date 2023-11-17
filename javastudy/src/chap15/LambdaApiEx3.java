@@ -31,6 +31,11 @@ class Student {
 	public int getEng() {		return eng;	}
 	public int getMath() {		return math;	}
 	public String getMajor() {		return major;	}
+	@Override
+	public String toString() {
+		return "("+name + "," + eng + "," + math + "," + major + ")";
+	}
+	
 }
 public class LambdaApiEx3 {
 	static List<Student> list = Arrays.asList(
